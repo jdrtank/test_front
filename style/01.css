@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+/*메인 스타일링
+====================================================*/
+html {
+    font-size: 100%;
+}
+body {
+    color: #555;
+    font-family: sans-serif;
+}
+
+/*
+COMMON
+================================================ */
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 7rem;
+    margin-bottom: 2rem;
+}
+p {
+    line-height: 1.7;
+    font-size: 1.125rem;
+}
+/*
+폰트 단위 em / rem ??
+em - 해당되는 요소의 바로 위 상위요소의 폰트 비율로 맞춘다. 즉 1em이면 위 상위요소의 폰트크기와 같은 크기
+rem - 해당되는 요소의 최상위 요소의 폰트 비율로 맞춘다. 모든 요소의 최상위 요소는 html에 해당되므로,
+rem은 html에 적용시킨 폰트 사이즈의 비율을 따라간다고 생각하면 된다. 
+*/
+
+
+
+
+/*스크롤 이동에 대한 각 속성 설명*/
+.container {
+    overflow: auto;
+    /*
+    scroll-snap-type 
+    속성을 y로 값을 입력하면 새로 방향으로 스크롤 할 때 빠르게 넘기거나 멈출수 있다.
+    풀스크린 레이아웃으로 구성한 웹 사이트에 적용하면 좋다.
+    속성값이 x인 경우에는 가로 방향으로 스크롤 할 때 사용할 수 있다.
+    주로 캐러셀 이미지 등에 사용할 수 있으며 모바일 용 화면 구성에도 적합하다.
+    
+    scroll-snap-type 속성 설명
+    x, y 설명은 윗부분 참고
+    
+    mandatory :  항상 스크롤 스탭이 동작하도록 설정할 수 있으며,
+    현재 표시되는 영역이나 다음 영역 등 어느 한 부분이 표시된다.
+    
+    proximity : 경계선 근처로 움직였을 때 화면이 스크롤 되고 그렇지 않으면 중간에서 멈춘다.
+    mandatory가 순간적으로 빠르게 움직이는 느낌이라면 proximity는 보다 부드럽게 움직이는 느낌을 준다.
+
+    */
+    scroll-snap-type: y mandatory;  /*부모요소인 container(div)에 scroll-snap-type을 추가*/
+    height: 100vh;
+}
+section {
+    height: 100vh;  /*높이를 100vh로 설정하여 화면을 꽉 채워주는 풀스크린으로 표현한다.*/
+    
+    /*
+    scroll-snap-align
+    scroll-snap-align 속성은 이동되는 컨테이너의 "자식" 요소에 작성한다.
+    영역 내 어느 위치를 기준선으로 잡고 멈추게 할 것인지 설정할 수 있다.
+    
+    scroll-snap-align : start
+    영역 시작점에서 스크롤이 멈춘다.
+    표시하는 요소가 세로(y)로 나열되었다면 상단이,
+    가로(x)로 나열되었다면 좌측이 기준선이된다.
+
+    scroll-snap-align : end
+    영역이 끝나는 지점에서 스크롤이 멈춘다.
+    표시하는 요소가 세로로 나열되었하단, 가로로 나열되었다면 우측이 기준선이된다.
+
+    scroll-snap-align : center
+    중앙에서 스크롤이 멈춘다.
+    */
+    scroll-snap-align: start;
+
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; /*이미지가 표시되는 위치를 조정*/
+}
+
+/*
+=============================================================*/
+.hero {
+    background-image: url(../image/bread1.jpg);
+    text-align: center;
+    padding-top: 10vh;
+}
+
+/*
+menu==========================================*/
+.menu {
+    background-image: url(../image/bread2.jpg);
+    display: flex;
+    align-items: center;
+}
+.wrapper {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.menu_list tr {
+    font-size: 1.125rem;
+    margin-bottom: .5rem;
+    line-height: 1.7;
+}
+.menu_list th {
+    font-weight: normal;
+}
+.menu_list td {
+    padding-left: 1rem;
+}
+
+/*
+contact==========================================*/
+.contact {
+    background-image: url(../image/cafe.jpg);
+    text-align: center;
+    padding-top: 8vh;
+}
+.btn {
+    background: #555;
+    font-size: 1.5rem;
+    color: #fff;
+    /*세로 가로 패딩*/
+    padding: 1rem 3.5rem;
+    /*모서리를 둥글게 처리*/
+    border-radius: 6px;
+    display: inline-block;
+    margin: 2rem 0 2.25rem;
+}
+.btn:hover {
+    background: #777;
+}
+.contact-sns {
+    /*
+    Flex 아이템들은 가로 방향으로 배치되고, 
+    자신이 가진 내용물의 width 만큼만 차지하게 된다. 
+    마치 inline 요소처럼. 
+    height는 컨테이너의 높이만큼 늘어난다.
+    */
+    display: flex;
+    justify-content: center;
+}
+.contact-sns a {
+    background: #fff;
+    width: 3.75rem;
+    height: 3.75rem;
+    display: inline-block;
+    margin: 0 .5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    padding: .75rem 0 0 .125rem;
+    color: #555;
+}
+.contact-sns a:hover {
+    background: rgba(255, 255, 255, .5);
+}
+
+/*
+모바일시 사이즈======================================*/
+@media (max-width: 700px) {
+    .title {
+        font-size: 4rem;
+    }
+    p {
+        padding: 0 1rem;
+    }
+    p, .menu_list li {
+        font-size: 1rem;
+    }
+    .hero {
+        padding-top: 12vh;
+    }
+}

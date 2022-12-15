@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--반응형 웹페이지를 위한 기본 뷰포트 설정-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCB Bakery</title>
+    <link rel="icon" type="image/svg+xml" href="./image/favicon.svg">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+    <!--구글 폰트 불러오기-->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/01.css">
+
+    <!-- FontAwesome -->
+    <!--웹페이지에 아이콘을 표시해주는 서비스 https://fontawesome.com-->
+    <script src="https://kit.fontawesome.com/b8a7fea4d4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--컨테이너를 사용하기 위해 div로 이동할 영역을 잡아주고 클래스명을 붙여준다.-->
+    <div class="container">
+        <section class="hero">
+            <h1 class="title">WCB Bakery</h1>
+            <p>
+                엄선된 재료와 식감이 살아있는 빵. <br>
+                매일 아침 갓구운 빵. <br>
+                빵과 함께 행복한 시간을 만끽해보세요. 
+            </p>
+        </section>
+
+        <section class="menu">
+            <div class="wrapper">
+                <h2 class="title">Menu</h2>
+                <table class="menu-list">
+                    <tr>
+                        <th>・메론빵</th>
+                        <td>2200원</td>
+                    </tr>
+                    <tr>
+                        <th>・사과 데니쉬</th>
+                        <td>2400원</td>
+                    </tr>
+                    <tr>
+                        <th>・초콜릿 크로와상</th>
+                        <td>2800원</td>
+                    </tr>
+                    <tr>
+                        <th>・바게트</th>
+                        <td>3000원</td>
+                    </tr>
+                    <tr>
+                        <th>・딸기 페스트리</th>
+                        <td>3000원</td>
+                    </tr>
+                    <tr>
+                        <th>・녹두앙금빵</th>
+                        <td>1500원</td>
+                    </tr>
+                    <tr>
+                        <th>・블루베리 쨈</th>
+                        <td>4000원</td>
+                    </tr>
+                    <tr>
+                        <th>런치세트</th>
+                        <td>12000원</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2 class="title">Contact</h2>
+            <p>경기도 광주시 초월읍 000-000</p>
+            <p>영업시간 8:00 ~ 20:00</p>
+
+            <a class="btn" href="#">문의사항</a>
+
+            <!--
+                아이콘을 표시하기 위한 리스트, 각각 페이스북, 트위터, 인스타그램 아이콘
+                <i class="fab fa-facebook-square fa-2x"></i>
+                예로 뒤에 fa-2x 부분은 크기를 설정해주는 클래스로 아이콘 크기가 2배로 변경된다. 
+            -->
+            <ul class="contact-sns">
+                <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
